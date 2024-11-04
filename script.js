@@ -5,8 +5,12 @@ fetch('clothing.txt')
     .then(response => response.text())
     .then(data => {
         clothingItems = data.split('\n').map(line => {
-            const [name, color] = line.split(',');
-            return { name: name.trim(), color: color.trim() };
+            const [name, color, imageUrl] = line.split(',');
+            return {
+                name: name.trim(),
+                color: color.trim(),
+                imageUrl: imageUrl ? imageUrl.trim() : 'https://elysianuk.org/wp-content/uploads/woocommerce-placeholder-300x300.png'
+            };
         });
         displayPopularItems();
     });
@@ -16,7 +20,7 @@ function displayPopularItems() {
     const popularItemsDiv = document.getElementById('popularItems');
     popularItemsDiv.innerHTML = clothingItems.slice(0, 6).map(item => `
         <div class="item">
-            <img src="placeholder.png" alt="${item.name}">
+            <img src="${item.imageUrl}" alt="${item.name}">
             <p>${item.color} ${item.name}</p>
         </div>
     `).join('');
@@ -34,7 +38,7 @@ function searchItem() {
     if (query && filteredItems.length > 0) {
         resultsDiv.innerHTML = filteredItems.map(item => `
             <div class="item">
-                <img src="placeholder.png" alt="${item.name}">
+                <img src="${item.imageUrl}" alt="${item.name}">
                 <p>${item.color} ${item.name}</p>
             </div>
         `).join('');
