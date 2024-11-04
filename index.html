@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Clothing Lookup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Home Screen Displaying Popular Items -->
+        <div class="home-screen" id="homeScreen">
+            <input type="text" id="searchBar" placeholder="Search for an item..." onkeyup="searchItem()">
+            <div id="popularItems" class="items">
+                <!-- Popular items will be populated here dynamically -->
+            </div>
+        </div>
+
+        <!-- Search Results Display -->
+        <div class="search-results" id="searchResults" style="display: none;">
+            <div id="resultItems" class="items">
+                <!-- Searched items will be displayed here -->
+            </div>
+            <div id="noResults" class="no-results" style="display: none;">
+                Sorry, item is unavailable.
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
