@@ -1,0 +1,5 @@
+Ralph Lauren shirt, Blue, https://elysianuk.org/wp-content/uploads/woocommerce-placeholder-300x300.png
+Ralph Lauren shirt, Red, https://elysianuk.org/wp-content/uploads/woocommerce-placeholder-300x300.png
+Ralph Lauren shirt, Green, https://elysianuk.org/wp-content/uploads/woocommerce-placeholder-300x300.png
+Clothing item, Black, https://elysianuk.org/wp-content/uploads/woocommerce-placeholder-300x300.png
+Clothing item, White, https://elysianuk.org/wp-content/uploads/woocommerce-placeholder-300x300.png
